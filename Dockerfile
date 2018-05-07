@@ -7,4 +7,4 @@ RUN pip install -r requirements.txt
 
 ADD . /app
 
-CMD ["python", "parser.py"] 
+CMD ["python", "worker.py"] 
