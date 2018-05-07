@@ -38,6 +38,7 @@ while($true) {
     if ( (Get-AzureRmContainerInstanceLog -ResourceGroupName aci-job -ContainerGroupName worker) -eq "Uploading to blob`n") {
         Remove-AzureRmContainerGroup -ResourceGroupName aci-job -Name worker
         echo "Container removed"
+        Break
     }
     Start-Sleep 10
 }
